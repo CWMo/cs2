@@ -1,0 +1,307 @@
+/* Contrology Studio color palete and font family*/
+@font-face { 
+    font-family: 'Glacial-Indifference'; 
+    src: url('GlacialIndifference-Regular.otf'); 
+} 
+
+@font-face { 
+    font-family: 'Moon-Time'; 
+    src: url('moon-time-regular.ttf'); 
+} 
+
+:root {
+    --gold: rgb(221, 171, 94);
+    --bronze: rgb(160, 132, 99);
+    --charcoal: rgb(66, 71, 84);
+    --blue: rgb(7, 122, 153);
+    --goldShade: rgb(208, 139, 32);
+    --goldTint: rgb(238, 213, 174);
+    --blueTint: rgb(148, 178, 191);
+    --primary-font: "Sorts Mill Goudy", serif;
+    --system-font: "Glacial-Indifference", sans-serif;
+    --special-font: "Moon-Time", cursive;
+    --secondary-font: "Calibri";
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--goldTint);
+}
+
+.video-container {
+    position: relative;
+}
+
+.video-container video {
+    object-fit: cover;
+    width: 100%;
+    height: 600px;
+}
+
+#video-message {
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+#home-logo {
+    display: block;
+    margin: auto;
+    height: 120px;
+    object-fit: cover;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+nav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: var(--system-font);
+    font-size: 1.5rem;
+}
+
+nav a:hover {
+    background-color: var(--goldTint);
+    color: var(--charcoal);
+}
+
+nav a.active {
+    border: 3px solid var(--gold);
+}
+
+#video-message {
+    color: white;
+}
+
+#home-title {
+    text-align: center;
+}
+
+#home-title h1 {
+    font-family: var(--special-font);
+    font-size: 5rem;
+}
+
+#home-title h2 {
+  font-family: var(--primary-font);
+  font-size: 3rem;
+}
+
+#home-title button {
+    height: 60px;
+    font-family: var(--system-font);
+    font-size: 1rem;
+    padding: 2px 16px;
+    border-radius: 10px;
+    border: 0;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 3vw;
+    min-height: calc(100vh - 338px);
+}
+
+.main-content {
+    flex-basis: 700px;
+}
+
+#contact-body .main-content {
+    flex-basis: 500px;
+}
+
+.content {
+    color: var(--charcoal);
+    padding: 20px 10px 20px 20px;
+}
+
+#home-body .content {
+    padding: 20px;
+}
+
+#home-body .content {
+    background-color: var(--goldTint);
+    opacity: 0.8;
+}
+
+main a {
+    color: var(--charcoal);
+    font-weight: bold;
+}
+
+main a:visited {
+    color: var(--charcoal);
+}
+
+main a:hover {
+    opacity: 0.7;
+}
+
+.normal-field {
+    width: 80%;
+    font-family: var(--primary-font);
+    color: var(--charcoal);
+    background-color: var(--goldTint);
+}
+
+#phone-area {
+    padding-left: 10px;
+}
+
+#contact-body input {
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    height: 1.5em;
+}
+
+#enquiry-form label {
+    display: block;
+    padding: 10px 0 0 0;
+}
+
+#ict:hover,
+#front:hover,
+#web:hover,
+#scripting:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.side-bar {
+    color: var(--goldTint);
+    flex-basis: 300px;
+    padding: 0 0 0 30px;
+}
+
+#contact-body .side-bar {
+    background-color: var(--charcoal);
+    flex-basis: 500px;
+    padding-left: 50px;
+}
+
+#contact-body .side-bar-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.hide {
+    display: none;
+}
+
+#quotation {
+    font-style: italic;
+    font-size: large;
+}
+
+#author {
+    text-align: right;
+}
+
+#next-button,
+#send-button,
+#ok-button {
+    background-color: var(--goldTint);
+    color: var(--charcoal);
+    font-family: var(--secondary-font);
+    font-size: medium;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    min-width: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#ok-button {
+    margin-top: 20px;
+}
+
+#send-button {
+    display: block;
+    margin: 10px 0 20px 0;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--charcoal);
+    color: var(--gold);
+    height: 100px;
+    align-items: center;
+}
+
+.copyright-area,
+.legal-area {
+    margin: 15px 30px;
+}
+
+.copyright-area {
+    font-size: large;
+}
+
+.legal-area a:link {
+    color: var(--goldTint);
+}
+
+.legal-area a:visited {
+    color: var(--gold);
+}
+
+.legal-area a:hover {
+    opacity: 0.7;
+}
+
+#social-media {
+    margin-left: 15px;
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.fa {
+    padding: 15px;
+    font-size: 25px;
+    color: var(--goldTint);
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+.fa-facebook {
+    background: #3B5998;
+}
+
+.fa-instagram {
+    background: #125688;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+}
