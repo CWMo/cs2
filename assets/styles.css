@@ -11,6 +11,8 @@
 
 :root {
     --primary-bgcolor: #F6EFEB;
+    --secondary-bgcolor: #EED7C1;
+    --dark-bgcolor: #2D3640;
     --bronze: rgb(160, 132, 99);
     --charcoal: rgb(66, 71, 84);
     --blue: rgb(7, 122, 153);
@@ -27,6 +29,9 @@ body {
     font-family: var(--primary-font);
     background-color: var(--primary-bgcolor);
 }
+button {
+    font-family: var(--system-font);
+}
 
 .video-container {
     position: relative;
@@ -39,9 +44,11 @@ body {
 }
 
 #video-message {
+    color: white;
     position: absolute;
     width: 100%;
     top: 0;
+    pointer-events: none;
 }
 
 #home-logo {
@@ -84,8 +91,8 @@ nav a:hover {
     position: absolute;
 }
 
-#video-message {
-    color: white;
+#menu-sect {
+    pointer-events: all;
 }
 
 #home-title {
@@ -106,17 +113,20 @@ nav a:hover {
 
 #home-title button {
     height: 60px;
-    font-family: var(--system-font);
     font-size: 1rem;
     padding: 2px 16px;
     border-radius: 10px;
     border: 0;
+    pointer-events: all;
 }
 
-#home-main1 {
+#home-main1, #home-main2, #home-main3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+#home-main1 {
     text-align: center;
 }
 
@@ -129,45 +139,84 @@ nav a:hover {
 }
 
 #home-main1 img {
-    max-height: 300px;
-    min-height: 100px;
     max-width: 300px;
-    min-width: 100px;
 }
 
-.main-content {
-    flex-basis: 700px;
+#home-main2 {
+    background-color: white;
+    padding: 50px;
 }
 
-#contact-body .main-content {
-    flex-basis: 500px;
+#home-main2 > div {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    row-gap: 20px;
 }
 
-.content {
-    color: var(--charcoal);
-    padding: 20px 10px 20px 20px;
+#home-main2 img {
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    max-width: 100%;
+    min-width: 150px;
 }
 
-#home-body .content {
-    padding: 20px;
+#home-main2 button {
+    width: 140px;
+    height: 55px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    background-color: var(--secondary-bgcolor);
+    border-width: thin;
 }
 
-#home-body .content {
-    background-color: var(--goldTint);
-    opacity: 0.8;
+#home-main3 {
+    padding: 50px;
+    column-gap: 10%;
+    align-items: stretch;
 }
 
-main a {
-    color: var(--charcoal);
-    font-weight: bold;
+#home-main3-1 {
+    flex: 1 1 40%;
 }
 
-main a:visited {
-    color: var(--charcoal);
+#home-main3-2 {
+    flex: 2 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-main a:hover {
-    opacity: 0.7;
+#home-main3 img {
+    border-radius: 80px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    max-width: 100%
+}
+
+#home-main3-2 h2 {
+    font-size: 2rem;
+    margin-bottom:0;
+}
+
+#home-main3-2 p {
+    font-family: var(--system-font);
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+#home-main3 button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: var(--secondary-bgcolor);
+    border-color: var(--dark-bgcolor);
+    border-width: thin;
 }
 
 .normal-field {
