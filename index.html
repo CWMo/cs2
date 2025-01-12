@@ -3,18 +3,20 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contrology Studio - Flow with Physio, Pilates, Gyrotonic</title>
+    <link rel="stylesheet" href="assets/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="icon" href="images/favicon.png">
-    <!-- <script src="assets/getNextQuote.js" defer></script> -->
+    <script src="assets/goTop.js" defer></script> 
 </head>
 
 <body>
+    <i id="topBtn" class=" fa fa-angle-up" onclick="topFunction()" title="Go to top"></i>
     <header class="video-container">
         <video preload="auto" controls muted loop>
             <source src="assets/class.mp4" type="video/mp4">
@@ -71,28 +73,16 @@
         </section>
         <section id="home-main2">
             <div>
-                <div>
-                    <img src="images/shot021.jpg" alt="">
-                </div>
-                <div>
-                    <button>Service</button>
-                </div>
+                <img src="images/shot021.jpg" alt="">
+                <button>Service</button>
             </div>
             <div>
-                <div>
-                    <img src="images/shot022.jpg" alt="">
-                </div>
-                <div>
-                    <button>Booking</button>
-                </div>
+                <img src="images/shot022.jpg" alt="">
+                <button>Booking</button>
             </div>
             <div>
-                <div>
-                    <img src="images/shot023.jpg" alt="">
-                </div>
-                <div>
-                    <button>FAQ</button>
-                </div>
+                <img src="images/shot023.jpg" alt="">
+                <button>FAQ</button>
             </div>
         </section>
         <section id="home-main3">   
@@ -104,7 +94,6 @@
                     <h2>
                         Initial Physiotherapy Assessment & Pilates/Gyrotonic® Session
                     </h2>
-                    <br>
                     <p>
                         Experience our unique 80-minute initial session tailored to your needs, starting with a 30-minute comprehensive assessment followed by a 50-minute Pilates or Gyrotonic® session conducted by a qualified physiotherapist. Together, we’ll set your health goals and develop an individualized program.
                     </p>
@@ -114,13 +103,44 @@
                 </div>
             </div>
         </section>
+        <section id="home-main4">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1sMewBJOmuAHziNlrVwF8Kq8Y5P3UuGs&ehbc=2E312F" width="100%" height="600"></iframe>
+        </section>
+        <section id="home-main5">
+            <div id="flow-with-us">
+                <h2>Flow with Us</h2>
+                <p>306/180-186 Burwood Rd, Burwood NSW 2154</p>
+                <p>Phone: 0413091144 <br> 
+                   <span class="small-text">(English, Cantonese and Mandarin)</span>
+                </p>
+                <p>Email: <span class="small-text">contrologystudio.sydney@gmail.com</span></p>
+                <h3 id="open-hours">OPEN HOURS</h3>
+                <p>Mon, Tues, Thurs, Fri <br>
+                8 am to 6 pm</p>
+                <p>Wed <br>
+                2 pm to 8 pm</p>
+                <p>Sat & Sun <br>
+                9 am to 1 pm</p>
+                <p>By Appointment Only</p>
+            </div>
+            <div id="follow-us">
+                <h3>FOLLOW US</h3>
+                <a href="https://www.facebook.com/profile.php?id=61559223262892" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <i class="fab fa-weixin"></i>
+                <a href="https://www.instagram.com/ctrlogy_studio" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.xiaohongshu.com/user/profile/5e75bdd4000000000100186d" target="_blank">
+                    <img src="images/xiaohongshu.png" alt="">
+                </a>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="copyright-area">
             Copyright &copy; 2024-2025 Contrology Studio
-        </div>
-        <div class="legal-area">
-            <a href="#">Legal</a>
         </div>
     </footer>
 </body>

@@ -2,6 +2,15 @@
 @font-face { 
     font-family: 'Glacial-Indifference'; 
     src: url('GlacialIndifference-Regular.otf'); 
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face { 
+    font-family: 'Glacial-Indifference'; 
+    src: url('glacial-indifference.bold.otf'); 
+    font-weight: bold;
+    font-style: normal;
 } 
 
 @font-face { 
@@ -28,9 +37,16 @@
 body {
     font-family: var(--primary-font);
     background-color: var(--primary-bgcolor);
+    font-weight: 100;
 }
 button {
     font-family: var(--system-font);
+}
+
+h2 {
+    font-family: var(--primary-font);
+    font-size: 3rem;
+    font-weight: 100;
 }
 
 .video-container {
@@ -102,12 +118,11 @@ nav a:hover {
 #home-title h1 {
     font-family: var(--special-font);
     font-size: 5rem;
+    font-weight: 100;
     margin-bottom: 0;
 }
 
 #home-title h2 {
-  font-family: var(--primary-font);
-  font-size: 3rem;
   margin: 20px 0;
 }
 
@@ -122,7 +137,6 @@ nav a:hover {
 
 #home-main1, #home-main2, #home-main3 {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -131,7 +145,14 @@ nav a:hover {
 }
 
 #home-main1 h2 {
-    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#home-main1 p {
+    font-family: var(--system-font);
+    font-size: 1.5rem;
+    padding: 0 20%;
+    margin-top: 0;
 }
 
 #home-main1 div {
@@ -145,6 +166,7 @@ nav a:hover {
 #home-main2 {
     background-color: white;
     padding: 50px;
+    column-gap: 5%;
 }
 
 #home-main2 > div {
@@ -161,7 +183,6 @@ nav a:hover {
     object-fit: cover;
     aspect-ratio: 1/1;
     max-width: 100%;
-    min-width: 150px;
 }
 
 #home-main2 button {
@@ -169,13 +190,13 @@ nav a:hover {
     height: 55px;
     border-radius: 10px;
     font-size: 1.5rem;
-    background-color: var(--secondary-bgcolor);
+    background-color: var(--primary-bgcolor);
     border-width: thin;
 }
 
 #home-main3 {
     padding: 50px;
-    column-gap: 10%;
+    column-gap: 5%;
     align-items: stretch;
 }
 
@@ -184,7 +205,7 @@ nav a:hover {
 }
 
 #home-main3-2 {
-    flex: 2 1 50%;
+    flex: 2 1 55%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -199,24 +220,133 @@ nav a:hover {
 }
 
 #home-main3-2 h2 {
-    font-size: 2rem;
-    margin-bottom:0;
+    font-size: 2.5rem;
+    margin-bottom:15px;
 }
 
 #home-main3-2 p {
     font-family: var(--system-font);
     font-size: 1.5rem;
     margin-top: 0;
+    padding-right: 30px;
 }
 
 #home-main3 button {
     width: 200px;
-    height: 50px;
+    height: 55px;
     border-radius: 10px;
     font-size: 1rem;
     background-color: var(--secondary-bgcolor);
     border-color: var(--dark-bgcolor);
     border-width: thin;
+}
+
+#home-main4 iframe {
+    border: 0;
+}
+
+#home-main5 {
+    background-image: url("../images/shot05.jpg");
+    background-size: cover;
+    height: 720px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#flow-with-us {
+    background-color: white;
+    opacity: 0.8;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    padding: 1rem;
+    width: 210px;
+    border-radius: 30px;
+}
+
+#flow-with-us h2 {
+    font-size: 2rem;
+}
+
+#open-hours {
+    font-family: var(--system-font);
+    font-size: 1.5rem;
+}
+
+#flow-with-us p {
+    font-family: var(--system-font);
+    font-size: 1.1rem;
+}
+
+#follow-us {
+    width: 150px;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+#follow-us h3 {
+    font-family: var(--system-font);
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+#follow-us img {
+    width: 36px;
+}
+
+#follow-us a:hover {
+    opacity: 0.7;
+}
+
+.fa-brands, .fab {
+    font-size: 1.5rem;
+    color: white;
+    background-color: transparent;
+    padding: 3px;
+}
+
+.small-text {
+    font-size: 0.8rem;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+#topBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: black; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 1rem; /* Some padding */
+    font-size: 2rem; /* Increase font size */
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.2;
+}
+
+#topBtn:hover {
+    opacity: 0.7;
+}
+
+footer {
+    background-color: black;
+}
+.copyright-area {
+    padding: 15px 30px;
+}
+
+.copyright-area {
+    font-size: 1rem;
+    font-family: var(--system-font);
+    color: white;
 }
 
 .normal-field {
@@ -310,73 +440,3 @@ input[type="tel"] {
     margin: 10px 0 20px 0;
 }
 
-button:hover {
-    opacity: 0.7;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--charcoal);
-    color: var(--gold);
-    height: 100px;
-    align-items: center;
-}
-
-.copyright-area,
-.legal-area {
-    margin: 15px 30px;
-}
-
-.copyright-area {
-    font-size: large;
-}
-
-.legal-area a:link {
-    color: var(--goldTint);
-}
-
-.legal-area a:visited {
-    color: var(--gold);
-}
-
-.legal-area a:hover {
-    opacity: 0.7;
-}
-
-#social-media {
-    margin-left: 15px;
-    display: flex;
-    width: 200px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.fa {
-    padding: 15px;
-    font-size: 25px;
-    color: var(--goldTint);
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-}
-
-/* Add a hover effect if you want */
-.fa:hover {
-    opacity: 0.7;
-}
-
-/* Set a specific color for each brand */
-
-.fa-facebook {
-    background: #3B5998;
-}
-
-.fa-instagram {
-    background: #125688;
-}
-
-.fa-twitter {
-    background: #55ACEE;
-}
