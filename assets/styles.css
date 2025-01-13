@@ -18,6 +18,11 @@
     src: url('moon-time-regular.ttf'); 
 } 
 
+@font-face { 
+    font-family: 'Kingred-Modern'; 
+    src: url('kingred.otf'); 
+} 
+
 :root {
     --primary-bgcolor: #F6EFEB;
     --secondary-bgcolor: #EED7C1;
@@ -31,6 +36,7 @@
     --primary-font: "Sorts Mill Goudy", serif;
     --system-font: "Glacial-Indifference", sans-serif;
     --special-font: "Moon-Time", cursive;
+    --emphasis-font: "Kingred-Modern", cursive;
     --secondary-font: "Calibri";
 }
 
@@ -49,7 +55,12 @@ h2 {
     font-weight: 100;
 }
 
-.video-container {
+#header {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+}
+
+#header, .video-container {
     position: relative;
 }
 
@@ -133,6 +144,18 @@ nav a:hover {
     border-radius: 10px;
     border: 0;
     pointer-events: all;
+}
+
+#page-header {
+    height: 200px;
+}
+
+#page-header h1 {
+    padding: 80px 0 0 50px;
+    font-family: var(--emphasis-font);
+    color: white;
+    font-size: 4rem;
+    font-weight: 100;
 }
 
 #home-main1, #home-main2, #home-main3 {
