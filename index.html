@@ -127,7 +127,9 @@
                 <a href="https://www.facebook.com/profile.php?id=61559223262892" target="_blank">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
-                <i class="fab fa-weixin"></i>
+                <a href="#" onclick="document.getElementById('wechat-modal').style.display = 'block'; return false;">
+                    <i class="fab fa-weixin"></i>
+                </a>
                 <a href="https://www.instagram.com/ctrlogy_studio" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
@@ -136,6 +138,19 @@
                 </a>
             </div>
         </section>
+
+        <!-- The Modal popup for wechat -->
+        <div id="wechat-modal" class="modal">
+            <div id="wechat-modal-content">
+                <h3>Follow us on WeChat</h3>
+                <p>Add us by scanning the QR code below from WeChat:</p>
+                <div>
+                    <img src="images/wechat.jpg" alt="">
+                </div>
+                <button class="close-btn" onclick="document.getElementById('wechat-modal').style.display='none'">X</button>
+            </div>
+        </div>
+  
     </main>
     <footer>
         <div class="copyright-area">
