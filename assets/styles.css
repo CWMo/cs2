@@ -26,8 +26,9 @@
 :root {
     --primary-bgcolor: #F6EFEB;
     --secondary-bgcolor: #EED7C1;
-    --dark-bgcolor: #2D3640;
-    --bronze: rgb(160, 132, 99);
+    --light-bgcolor: #F7F6F6;
+    --dark-color: #2D3640;
+    --primary-color: #2d3640;
     --charcoal: rgb(66, 71, 84);
     --blue: rgb(7, 122, 153);
     --goldShade: rgb(208, 139, 32);
@@ -44,15 +45,21 @@ body {
     font-family: var(--primary-font);
     background-color: var(--primary-bgcolor);
     font-weight: 100;
+    color: var(--dark-color);
 }
 button {
     font-family: var(--system-font);
+    color: var(--dark-color);
 }
 
 h2 {
     font-family: var(--primary-font);
     font-size: 3rem;
-    font-weight: 100;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 #header {
@@ -96,13 +103,13 @@ nav {
 nav a {
     color: white;
     padding: 5px;
-    text-decoration: none;
+/*    text-decoration: none; */
     font-family: var(--system-font);
     font-size: 1.5rem;
 }
 
-nav a:hover {
-    font-weight: bolder;
+nav .dropdown a:hover {
+    text-decoration: underline;
 }
 
 .dropdown-item {
@@ -113,7 +120,7 @@ nav a:hover {
     display: block;
 }
 
-.dropdown:hover .dropdown-item{
+.dropdown:hover .dropdown-item {
     display: block;
     position: absolute;
 }
@@ -151,14 +158,14 @@ nav a:hover {
 }
 
 #page-header h1 {
-    padding: 80px 0 0 50px;
+    padding: 5% 0 0 5%;
     font-family: var(--emphasis-font);
     color: white;
     font-size: 4rem;
     font-weight: 100;
 }
 
-#home-main1, #home-main2, #home-main3 {
+.flex-row {
     display: flex;
     justify-content: space-around;
 }
@@ -261,7 +268,7 @@ nav a:hover {
     border-radius: 10px;
     font-size: 1rem;
     background-color: var(--secondary-bgcolor);
-    border-color: var(--dark-bgcolor);
+    border-color: var(--dark-color);
     border-width: thin;
 }
 
@@ -347,7 +354,7 @@ button:hover {
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: black; /* Set a background color */
+    background-color: var(--dark-color); /* Set a background color */
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 1rem; /* Some padding */
@@ -371,7 +378,7 @@ button:hover {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: black; /*fallback color */
+    background-color: var(--dark-color); /*fallback color */
     background-color: rgb(0,0,0, 0.7);
 }
 
@@ -389,7 +396,7 @@ button:hover {
 }
 
 #wechat-modal img {
-    border: 1px solid black;
+    border: 1px solid var(--dark-color);
 }
 
 #wechat-modal .close-btn {
@@ -398,8 +405,115 @@ button:hover {
     top: 0;
 }
 
+#about-main1 {
+    padding: 4rem 10%;
+    background-color: var(--light-bgcolor);
+    font-family: var(--system-font);
+    font-size: 1.5rem;
+}
+
+#team {
+    padding: 3% 5%;
+}
+
+#team h2 {
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+#team .flex-row {
+    justify-content: space-between;
+}
+
+#team > .flex-row > div {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    max-width: 330px;
+}
+
+#team > .flex-row img {
+    border-radius: 15%;
+    object-fit: cover;
+    aspect-ratio: 1.4/1;
+    max-width: 100%;
+}
+
+#team h4 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin: 0;
+}
+
+#team p {
+    font-size: 1.2rem;
+    font-family: var(--system-font);
+    margin: 0;
+}
+
+#team a:hover {
+    text-decoration: underline; 
+}
+
+#winkie, #shirley {
+    background-color: var(--light-bgcolor);
+}
+
+.persona {
+    position: relative;
+    padding: 3% 5%;
+}
+
+.persona h3 {
+    font-size: 2.5rem;
+    font-weight: 100;
+    position: absolute;
+    top: 10px;
+}
+
+#salad h3 {
+    position: static;
+}
+
+.persona .flex-row {
+    column-gap: 5%;
+    align-items: stretch;
+}
+
+.persona .flex-row .left {
+    font-family: var(--system-font);
+    font-size: 1.2rem;
+    flex: 1 1 35%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.persona .flex-row .left .filler {
+    height: 80px;
+}
+
+.persona .flex-row .left img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.qualification {
+    text-decoration: underline;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+.persona .flex-row .right {
+    flex: 2 1 60%;
+    font-family: var(--system-font);
+    font-size: 1.6rem;
+}
+
 footer {
-    background-color: black;
+    background-color: var(--dark-color);
 }
 .copyright-area {
     padding: 15px 30px;
@@ -411,94 +525,8 @@ footer {
     color: white;
 }
 
-.normal-field {
-    width: 80%;
-    font-family: var(--primary-font);
-    color: var(--charcoal);
-    background-color: var(--goldTint);
-}
-
-#phone-area {
-    padding-left: 10px;
-}
-
-#contact-body input {
-    display: block;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
-    height: 1.5em;
-}
-
-#enquiry-form label {
-    display: block;
-    padding: 10px 0 0 0;
-}
-
-#ict:hover,
-#front:hover,
-#web:hover,
-#scripting:hover {
-    cursor: pointer;
-    opacity: 0.7;
-}
-
-.side-bar {
-    color: var(--goldTint);
-    flex-basis: 300px;
-    padding: 0 0 0 30px;
-}
-
-#contact-body .side-bar {
-    background-color: var(--charcoal);
-    flex-basis: 500px;
-    padding-left: 50px;
-}
-
-#contact-body .side-bar-message {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-
 .hide {
     display: none;
 }
 
-#quotation {
-    font-style: italic;
-    font-size: large;
-}
-
-#author {
-    text-align: right;
-}
-
-#next-button,
-#send-button,
-#ok-button {
-    background-color: var(--goldTint);
-    color: var(--charcoal);
-    font-family: var(--secondary-font);
-    font-size: medium;
-    font-weight: bold;
-    padding: 5px 10px;
-    margin-bottom: 10px;
-    min-width: 80px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#ok-button {
-    margin-top: 20px;
-}
-
-#send-button {
-    display: block;
-    margin: 10px 0 20px 0;
-}
 
