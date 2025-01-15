@@ -52,8 +52,12 @@ button {
     color: var(--dark-color);
 }
 
-h2 {
+h1, h2, h3, h4 {
     font-family: var(--primary-font);
+    font-weight: 100;    
+}
+
+h2 {
     font-size: 3rem;
 }
 
@@ -303,6 +307,7 @@ nav .dropdown a:hover {
 #open-hours {
     font-family: var(--system-font);
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
 #flow-with-us p {
