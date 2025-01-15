@@ -1,0 +1,40 @@
+main {
+    line-height: 1.2;
+}
+
+section {
+    padding: 5%;
+}
+
+#faq {
+    background-color: var(--light-bgcolor);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 100;;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-family: var(--system-font);
+    font-weight: 100;
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 1.2rem;
+    font-family: var(--system-font);
+    margin-top: 0;
+}
+
+.emphasize {
+    font-weight: 800;
+}
+
+#policy {
+    text-align: left;
+    background-color: var(--primary-bgcolor);
+}

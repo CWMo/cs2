@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Contrology Studio - Booking</title>
+    <title>Contrology Studio - Contact us</title>
     <link rel="stylesheet" href="assets/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/contact.css">
     <link rel="icon" href="images/favicon.png">
     <script src="assets/goTop.js" defer></script> 
 </head>
@@ -35,44 +36,49 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="#">Booking</a>
+                    <a href="booking.html#page-header">Booking</a>
                 </div>
                 <div class="dropdown">
                     <a href="faq.html#page-header">FAQ</a>
                     <div class="dropdown-item"><a href="faq.html#policy">Policy</a></div>
                 </div>
                 <div class="dropdown">
-                    <a href="contact.html#page-header">Contact</a>
+                    <a href="#page-header">Contact</a>
                 </div>
             </nav>
         </div>
         <div id="page-header">
-            <h1>Booking</h1>
+            <h1>Contact Us</h1>
         </div>
     </header>
     <i id="topBtn" class=" fa fa-angle-up" onclick="topFunction()" title="Go to top"></i>
     <main>
-        <section id="booking">
-            <iframe id='cliniko-31684730' 
-                src='https://contrology-studio.au4.cliniko.com/bookings?business_id=1445984725960238773&embedded=true' 
-                frameborder='0' 
-                scrolling='auto' 
-                width='100%' 
-                height='1000' 
-                style='pointer-events: auto;'>
-            </iframe>
-<script type='text/javascript'>
-  window.addEventListener('message', function handleIFrameMessage (e) {
-    var clinikoBookings = document.getElementById('cliniko-31684730');
-    if (typeof e.data !== 'string') return;
-    if (e.data.search('cliniko-bookings-resize') > -1) {
-      var height = Number(e.data.split(':')[1]);
-      clinikoBookings.style.height = height + 'px';
-    }
-    e.data.search('cliniko-bookings-page') > -1 && clinikoBookings.scrollIntoView();
-  });
-</script>
-  
+        <section class="flex-row">
+            <div>
+                <h3>Location</h3>
+                <p>306/180-186 Burwood Rd, <br>
+                    Burwood NSW 2134
+                </p>
+                <p>You’ll find the lift entry next to “Ice Kirin”. We’re located on Level 3</p>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Phone: 0413091144 <br>
+                    (English, Cantonese and Mandarin)
+                </p>
+                <p>Email: <br>
+                    contrologystudio.syndey@gmail.com
+                </p>
+            </div>
+            <div>
+                <h3>Hours</h3>
+                <p>Mon, Tues, Thurs, Fri - 8 am to 6 pm <br>
+                    Wed - 2 pm to 8 pm <br>
+                    Sat & Sun - 9 am to 1 pm
+                </p>
+                <p>By Appointment Only</p>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="copyright-area">
@@ -80,5 +86,4 @@
         </div>
     </footer>
 </body>
-
 </html>
