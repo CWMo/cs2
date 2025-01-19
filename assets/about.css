@@ -1,0 +1,108 @@
+#about-main1 {
+    color: var(--dark-color2);
+}
+
+#about-main1 {
+    padding: 4rem 10%;
+    background-color: var(--light-bgcolor);
+    font-family: var(--system-font);
+    font-size: 1.5rem;
+}
+
+#team {
+    padding: 3% 5%;
+}
+
+#team h2 {
+    font-size: 3rem;
+    color: var(--dark-color3);
+}
+
+#team .flex-row {
+    justify-content: space-between;
+    column-gap: 3%;
+}
+
+#team > .flex-row > div {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    max-width: 330px;
+}
+
+#team > .flex-row img {
+    border-radius: 15%;
+    object-fit: cover;
+    aspect-ratio: 1.4/1;
+    max-width: 100%;
+}
+
+#team h4 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin: 0;
+}
+
+#team p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+#team a:hover {
+    text-decoration: underline; 
+}
+
+#winkie, #shirley {
+    background-color: var(--light-bgcolor);
+}
+
+.persona {
+    position: relative;
+    padding: 3% 5%;
+}
+
+.persona h3 {
+    font-size: 2.5rem;
+    font-weight: 100;
+    position: absolute;
+    top: 10px;
+}
+
+#salad h3 {
+    position: static;
+}
+
+.persona .flex-row {
+    column-gap: 5%;
+    align-items: stretch;
+}
+
+.persona .flex-row .left {
+    font-size: 1.2rem;
+    flex: 1 1 35%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.persona .flex-row .left .filler {
+    height: 80px;
+}
+
+.persona .flex-row .left img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.qualification {
+    text-decoration: underline;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+.persona .flex-row .right {
+    flex: 2 1 60%;
+    font-size: 1.6rem;
+}

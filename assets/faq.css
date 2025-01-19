@@ -9,17 +9,16 @@ section {
 #faq {
     background-color: var(--light-bgcolor);
     text-align: center;
+    color: black;
 }
 
 h2 {
     font-size: 2rem;
-    font-weight: 100;;
 }
 
 h3 {
     font-size: 1.5rem;
     font-family: var(--system-font);
-    font-weight: 100;
     text-decoration: underline;
     margin-bottom: 0;
 }
@@ -37,4 +36,5 @@ p {
 #policy {
     text-align: left;
     background-color: var(--primary-bgcolor);
+    color: var(--dark-color3);
 }

@@ -1,0 +1,49 @@
+#physiotherapy, #gyrotonic {
+    background-color: var(--light-bgcolor);
+}
+
+#services section {
+    padding: 3% 3% 3% 6%;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+#services .flex-row {
+    align-items:center;
+    justify-content: space-between;
+    padding-right: 3%;
+}
+
+#services h2 {
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+#services .template1 h2 {
+    padding-left: 54%;
+}
+
+#services .description {
+    font-family: var(--system-font);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    width: 50%;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+#services .description p {
+    margin: 0;
+}
+
+#services .image {
+    width: 45%;
+}
+
+
+#services .image img {
+    width:100%;
+    aspect-ratio: 7/5;
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
