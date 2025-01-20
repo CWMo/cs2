@@ -19,14 +19,26 @@ h2 {
 h3 {
     font-size: 1.5rem;
     font-family: var(--system-font);
-    text-decoration: underline;
     margin-bottom: 0;
+    cursor: pointer;
+}
+
+h3:hover {
+    text-decoration: underline;
 }
 
 p {
     font-size: 1.2rem;
     font-family: var(--system-font);
     margin-top: 0;
+}
+
+#faq p {
+    display: none;
+}
+
+#faq p.show {
+    display: block;
 }
 
 .emphasize {
