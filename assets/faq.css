@@ -50,3 +50,10 @@ p {
     background-color: var(--primary-bgcolor);
     color: var(--dark-color3);
 }
+
+@media (hover: none) {
+    /* when hover is not supported */
+    h3 {
+      text-decoration: underline;
+    }
+  }

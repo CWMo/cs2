@@ -1,3 +1,8 @@
+main {
+    font-size: 1.25rem;
+    line-height: 1.75;;
+}
+
 #about-main1 {
     color: var(--dark-color2);
 }
@@ -6,7 +11,6 @@
     padding: 4rem 10%;
     background-color: var(--light-bgcolor);
     font-family: var(--system-font);
-    font-size: 1.5rem;
 }
 
 #team {
@@ -58,7 +62,7 @@
 
 .persona {
     position: relative;
-    padding: 3% 5%;
+    padding: 3% 7.5%;
 }
 
 .persona h3 {
@@ -68,25 +72,18 @@
     top: 10px;
 }
 
-#salad h3 {
-    position: static;
-}
-
 .persona .flex-row {
-    column-gap: 5%;
-    align-items: stretch;
+    column-gap: 7.5%;
+    align-items: end;
 }
 
 .persona .flex-row .left {
-    font-size: 1.2rem;
     flex: 1 1 35%;
     text-align: center;
     display: flex;
     flex-direction: column;
-}
-
-.persona .flex-row .left .filler {
-    height: 80px;
+    font-size: 1rem;
+    line-height: 1.2;
 }
 
 .persona .flex-row .left img {
@@ -94,6 +91,10 @@
     border-radius: 50%;
     object-fit: cover;
     aspect-ratio: 1/1;
+}
+
+.persona .right p:last-child {
+    margin-bottom: 0;
 }
 
 .qualification {
@@ -104,5 +105,11 @@
 
 .persona .flex-row .right {
     flex: 2 1 60%;
-    font-size: 1.6rem;
 }
+
+@media only screen and (min-width: 1100px) {
+    #salad h3 {
+        position: static;
+    }
+}
+

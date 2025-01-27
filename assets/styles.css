@@ -35,7 +35,9 @@ body {
     font-family: var(--system-font);
     background-color: var(--primary-bgcolor);
     font-weight: 100;
+    font-size: 1.5rem;
     color: var(--dark-color);
+    line-height: 1.5;
 }
 
 h1, h2, h3, h4 {
@@ -83,7 +85,7 @@ nav {
 nav a {
     color: white;
     padding: 5px;
-    font-size: 1.5rem;
+    line-height: 1;
 }
 
 nav .dropdown a:hover {

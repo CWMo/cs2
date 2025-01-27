@@ -3,7 +3,7 @@
 }
 
 #services section {
-    padding: 3% 3% 3% 6%;
+    padding: 3% 7.5%;
     width: 100vw;
     box-sizing: border-box;
 }
@@ -25,11 +25,11 @@
 
 #services .description {
     font-family: var(--system-font);
-    font-size: 1.5rem;
-    line-height: 1.2;
     width: 50%;
     border-top-width: 1px;
     border-top-style: solid;
+    font-size: 1.25rem;
+    line-height: 1.75;
 }
 
 #services .description p {
