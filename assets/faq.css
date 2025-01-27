@@ -51,7 +51,7 @@ p {
     color: var(--dark-color3);
 }
 
-@media (hover: none) {
+@media (pointer: coarse) {
     /* when hover is not supported */
     h3 {
       text-decoration: underline;
