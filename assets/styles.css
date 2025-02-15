@@ -29,15 +29,22 @@
     --system-font: "Glacial-Indifference", sans-serif;
     --title-font: "Sorts Mill Goudy", serif;
     --emphasis-font: "Kingred-Modern", cursive;
+    --max-width: 1280px;
 }
 
 body {
     font-family: var(--system-font);
-    background-color: var(--primary-bgcolor);
+    background-color: white;
     font-weight: 100;
     font-size: 1.5rem;
     color: var(--dark-color);
     line-height: 1.5;
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 h1, h2, h3, h4 {
@@ -49,11 +56,16 @@ h2 {
     font-size: 3rem;
 }
 
-button {
+button, .btn {
     color: var(--dark-color);
+    border: 1px solid var(--dark-color3);
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
-button:hover {
+button:hover, .btn:hover {
     opacity: 0.7;
 }
 
@@ -63,16 +75,27 @@ a {
 }
 
 #header {
-    background-image: url(../images/background.jpg);
-    background-size: cover;
+    background-image: url(../images/bg.png);
+    background-size: 1080px;
+    background-position: 0 15%;
     position: relative;
 }
 
-#home-logo {
+#logo-sect {
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
     display: block;
-    margin: auto;
+    margin: auto; 
     height: 120px;
-    object-fit: cover;
+    object-fit: contain;
+    max-width:75%;
+}
+
+#menu-control {
+    display: none;
 }
 
 nav {
@@ -97,7 +120,7 @@ nav .dropdown a:hover {
 }
 
 .dropdown-item a {
-    display: block;
+    display: block; /* so each item shown on a separate line */
 }
 
 .dropdown:hover .dropdown-item {
@@ -107,6 +130,57 @@ nav .dropdown a:hover {
 
 #menu-sect {
     pointer-events: all;
+}
+
+@media only screen and (max-width: 481px) {
+
+    body {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    #logo-sect {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo {
+        /* height: auto; */
+    }
+
+    #menu-control {
+        display: block;
+        margin-right: 5%;
+        font-size: 1.5rem;
+        pointer-events: all;
+    }
+
+    #menu-sect, .dropdown-item {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav a {
+        text-decoration: underline;
+    }
+
+    .dropdown {
+        line-height: 1;
+        font-size: 1.25rem;
+        padding: 0 5%;
+    }
+
+    #menu-sect.show {
+        display: block;
+        position: absolute;
+        top: 100px;
+    }
 }
 
 #page-header {
@@ -139,8 +213,8 @@ nav .dropdown a:hover {
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 1rem; /* Some padding */
     font-size: 2rem; /* Increase font size */
-    width: 2rem;
-    height: 2rem;
+    width: 4rem;
+    height: 4rem;
     opacity: 0.2;
 }
 
@@ -164,5 +238,3 @@ footer {
 .hide {
     display: none;
 }
-
-

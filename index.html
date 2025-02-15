@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contrology Studio - Flow with Physio, Pilates, Gyrotonic</title>
     <link rel="stylesheet" href="assets/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,16 +13,23 @@
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="assets/index.css">
     <link rel="icon" href="images/favicon.png">
+    <script src="assets/toggleMenu.js" defer></script> 
     <script src="assets/goTop.js" defer></script> 
+    <script src="assets/autoplay.js"></script> 
 </head>
 
 <body>
     <header class="video-container">
-        <video preload="auto" autoplay controls muted loop>
+        <video id="myVideo" preload="auto" muted loop>
             <source src="assets/class.mp4" type="video/mp4">
         </video> 
         <div id="video-message">
-            <img id="home-logo" alt="Contrology Studio" src="images/logo-white.png">
+            <section id="logo-sect">
+                <img id="logo" alt="Contrology Studio" src="images/logo-white.png">
+                <div id="menu-control" onclick="toggleMenu(this, 'menu-sect')">
+                    ≡
+                </div>
+            </section>
             <section id="menu-sect">
                 <nav>
                     <div class="dropdown">
@@ -63,7 +71,7 @@
     <i id="topBtn" class=" fa fa-angle-up" onclick="topFunction()" title="Go to top"></i>
     <main>
         <section id="home-main1" class="flex-row">
-            <div style="flex: 3 1">
+            <div id="home-main1-left" style="flex: 3 1">
                 <h2>Everyone is different, so is our studio.</h2>
                 <p>
                     At Contrology Studio, we believe in individualised movement-therapy. 
@@ -75,20 +83,20 @@
         <section id="home-main2" class="flex-row">
             <div>
                 <img src="images/shot021.jpg" alt="">
-                <a href="services.html#page-header">
-                    <button>Service</button>
+                <a href="services.html#page-header" class="btn">
+                    Service
                 </a>
             </div>
             <div>
                 <img src="images/shot022.jpg" alt="">
-                <a href="booking.html#page-header"> 
-                    <button>Booking</button>
+                <a href="booking.html#page-header" class="btn"> 
+                    Booking
                 </a>
             </div>
             <div>
                 <img src="images/shot023.jpg" alt="">
-                <a href="faq.html#page-header">
-                    <button>FAQ</button>
+                <a href="faq.html#page-header" class="btn">
+                    FAQ
                 </a>
             </div>
         </section>
@@ -117,18 +125,13 @@
         <section id="home-main5" class="">
             <div id="flow-with-us">
                 <h2>Flow with Us</h2>
-                <p>306/180-186 Burwood Rd, Burwood NSW 2154</p>
+                <p>306/180-186 Burwood Rd, Burwood NSW 2134</p>
                 <p>Phone: 0413091144 <br> 
                    <span class="small-text">(English, Cantonese and Mandarin)</span>
                 </p>
                 <p>Email: <span class="small-text">contrologystudio.sydney@gmail.com</span></p>
                 <h3 id="open-hours">OPEN HOURS</h3>
-                <p>Mon, Tues, Thurs, Fri <br>
-                8 am to 6 pm</p>
-                <p>Wed <br>
-                2 pm to 8 pm</p>
-                <p>Sat & Sun <br>
-                9 am to 1 pm</p>
+                <p>Mon to Sun</p>
                 <p>By Appointment Only</p>
             </div>
             <div id="follow-us">
