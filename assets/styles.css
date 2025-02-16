@@ -63,8 +63,9 @@ a {
 }
 
 #header {
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/bg.png);
     background-size: cover;
+    background-position: 0 18%;
     position: relative;
 }
 

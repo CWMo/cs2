@@ -166,7 +166,6 @@ main button {
     background-position: center;
     height: 720px;
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
 }
 
@@ -174,10 +173,10 @@ main button {
     background-color: white;
     opacity: 0.8;
     margin-left: 5%;
-    margin-bottom: 5%;
     padding: 1rem;
     width: 210px;
     border-radius: 30px;
+    align-self: center;
 }
 
 #flow-with-us h2 {
@@ -209,6 +208,7 @@ main button {
     width: 150px;
     margin-right: 5%;
     margin-bottom: 5%;
+    align-self: flex-end;
 }
 
 #follow-us h3 {
