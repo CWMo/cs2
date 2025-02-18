@@ -29,15 +29,22 @@
     --system-font: "Glacial-Indifference", sans-serif;
     --title-font: "Sorts Mill Goudy", serif;
     --emphasis-font: "Kingred-Modern", cursive;
+    --max-width: 1200px;
 }
 
 body {
     font-family: var(--system-font);
-    background-color: var(--primary-bgcolor);
+    /* background-color: white; */
     font-weight: 100;
     font-size: 1.5rem;
     color: var(--dark-color);
     line-height: 1.5;
+    /* max-width: var(--max-width); */
+    /* margin: auto; */
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 h1, h2, h3, h4 {
@@ -49,17 +56,26 @@ h2 {
     font-size: 3rem;
 }
 
-button {
+button, .btn {
     color: var(--dark-color);
+    border: 1px solid var(--dark-color3);
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
-button:hover {
+button:hover, .btn:hover {
     opacity: 0.7;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.invisible {
+    visibility: hidden;
 }
 
 #header {
@@ -69,11 +85,21 @@ a {
     position: relative;
 }
 
-#home-logo {
+#logo-sect {
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
     display: block;
-    margin: auto;
+    margin: auto; 
     height: 120px;
-    object-fit: cover;
+    object-fit: contain;
+    max-width:75%;
+}
+
+#menu-control {
+    display: none;
 }
 
 nav {
@@ -98,7 +124,7 @@ nav .dropdown a:hover {
 }
 
 .dropdown-item a {
-    display: block;
+    display: block; /* so each item shown on a separate line */
 }
 
 .dropdown:hover .dropdown-item {
@@ -115,6 +141,8 @@ nav .dropdown a:hover {
 }
 
 #page-header h1 {
+    max-width: var(--max-width);
+    margin: auto;
     padding: 5% 0 0 5%;
     font-family: var(--emphasis-font);
     color: var(--light-bgcolor);
@@ -125,6 +153,11 @@ nav .dropdown a:hover {
 .flex-row {
     display: flex;
     justify-content: space-around;
+}
+
+.content {
+    max-width: var(--max-width);
+    margin: auto;
 }
 
 #topBtn {
@@ -140,8 +173,8 @@ nav .dropdown a:hover {
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 1rem; /* Some padding */
     font-size: 2rem; /* Increase font size */
-    width: 2rem;
-    height: 2rem;
+    width: 4rem;
+    height: 4rem;
     opacity: 0.2;
 }
 
@@ -153,17 +186,94 @@ footer {
     background-color: var(--dark-color);
 }
 .copyright-area {
+    max-width: var(--max-width);
+    margin: auto;
     padding: 15px 30px;
-}
-
-.copyright-area {
     font-size: 1rem;
     font-family: var(--system-font);
     color: white;
+}
+
+.copyright-area a {
+    text-decoration: underline;
 }
 
 .hide {
     display: none;
 }
 
+@media only screen and (max-width: 481px) {
 
+    body {
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    #logo-sect {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo {
+        margin-left: 3%;
+    }
+
+    #menu-control {
+        display: block;
+        margin-right: 5%;
+        font-size: 1.5rem;
+        pointer-events: all;
+        color: white;
+    }
+
+    #menu-sect, .dropdown-item {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav a {
+        text-decoration: underline;
+    }
+
+    .dropdown {
+        line-height: 1;
+        font-size: 1.25rem;
+        padding: 0 5%;
+    }
+
+    #menu-sect.show {
+        display: block;
+        position: absolute;
+        top: 100px;
+    }
+
+    #topBtn {
+        bottom: 3vw;
+        right: 3vw;
+        padding: 3vw;
+        font-size: 5vw;
+        width: 10vw;
+        height: 10vw;
+    }
+
+    #page-header {
+        height: 150px;
+    }
+
+    #page-header h1 {
+        padding: 4rem 0 0 0;
+        font-size: 2.625rem;
+        text-align: center;
+    }
+
+    .copyright-area {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}

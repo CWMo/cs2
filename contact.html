@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contrology Studio - Contact us</title>
     <link rel="stylesheet" href="assets/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,16 +15,22 @@
     <link rel="icon" href="images/favicon.png">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BW7WHWGVHE"></script>
+    <script src="assets/toggleMenu.js" defer></script> 
     <script src="assets/analytics.js"></script>
     <script src="assets/goTop.js" defer></script> 
 </head>
 
 <body>
     <header id="header">
-        <a href="index.html">
-            <img id="home-logo" alt="Contrology Studio" src="images/logo-white.png">
-        </a>
-        <div id="menu-sect">
+        <section id="logo-sect">
+            <a href="index.html">
+                <img id="logo" alt="Contrology Studio" src="images/logo-white.png">
+            </a>
+            <div id="menu-control" onclick="toggleMenu(this, 'menu-sect')">
+                ≡
+            </div>
+        </section>
+        <section id="menu-sect" class="content">
             <nav>
                 <div class="dropdown">
                     <a href="about.html#page-header">About</a>
@@ -49,40 +56,44 @@
                     <a href="#page-header">Contact</a>
                 </div>
             </nav>
-        </div>
-        <div id="page-header">
-            <h1>Contact Us</h1>
-        </div>
+        </section>
+        <section id="page-header">
+            <div class="content">
+                <h1>Contact Us</h1>
+            </div>
+        </section>
     </header>
     <i id="topBtn" class=" fa fa-angle-up" onclick="topFunction()" title="Go to top"></i>
     <main>
-        <section id="contact-info" class="flex-row">
-            <div>
-                <h3>Location</h3>
-                <p>306/180-186 Burwood Rd, <br>
-                    Burwood NSW 2134
-                </p>
-                <p>You’ll find the lift entry next to “Ice Kirin”. We’re located on Level 3</p>
-            </div>
-            <div>
-                <h3>Contact</h3>
-                <p>Phone: 0413091144 <br>
-                    (English, Cantonese and Mandarin)
-                </p>
-                <p>Email: <br>
-                    contrologystudio.syndey@gmail.com
-                </p>
-            </div>
-            <div>
-                <h3>Hours</h3>
-                <p>Monday - Sunday <br></p>
-                <p><br><br>By Appointment Only</p>
+        <section id="contact-info">
+            <div class="content flex-row">
+                <div>
+                    <h3>Location</h3>
+                    <p>306/180-186 Burwood Rd, <br>
+                        Burwood NSW 2134
+                    </p>
+                    <p>You’ll find the lift entry next to “Ice Kirin”. We’re located on Level 3</p>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <p>Phone: 0413091144 <br>
+                        (English, Cantonese and Mandarin)
+                    </p>
+                    <p>Email: <br>
+                        contrologystudio.syndey@gmail.com
+                    </p>
+                </div>
+                <div>
+                    <h3>Hours</h3>
+                    <p>Monday - Sunday <br class="no-mobile"></p>
+                    <p><br class="no-mobile"><br class="no-mobile">By Appointment Only</p>
+                </div>
             </div>
         </section>
     </main>
     <footer>
         <div class="copyright-area">
-            Copyright &copy; 2024-2025 Contrology Studio
+            Copyright &copy; 2024-2025 <a href="index.html">Contrology Studio</a>
         </div>
     </footer>
 </body>

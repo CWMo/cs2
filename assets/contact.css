@@ -1,4 +1,4 @@
-section {
+main .content {
     padding: 5%;
     justify-content: space-between;
     column-gap: 5%;
@@ -18,4 +18,15 @@ h3 {
 
 .flex-row div {
     flex: 1 1 30%;
+}
+
+@media only screen and (max-width: 481px) {
+    .flex-row {
+        display: block;
+        text-align: center;
+    }
+
+    .no-mobile {
+        display: none;
+    }
 }

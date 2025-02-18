@@ -7,8 +7,12 @@
     --special-font: "Moon-Time", cursive;
 }
 
+header {
+    background-color: var(--primary-bgcolor);
+}
+
 .video-container {
-    position: relative;
+    position: relative; /* to allow superimposed by #video-message */
 }
 
 .video-container video {
@@ -20,8 +24,11 @@
 #video-message {
     color: white;
     position: absolute;
-    width: 100%;
+    /* max-width: var(--max-width); */
+    /* margin: auto; */
     top: 0;
+    left: 0;
+    right: 0;
     pointer-events: none;
 }
 
@@ -37,8 +44,14 @@
     margin-bottom: 0;
 }
 
+#home-title-details {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
 #home-title h2 {
-  margin: 20px 0;
+  margin: 0;
 }
 
 #home-title button {
@@ -56,6 +69,9 @@ main button {
 
 #home-main1 {
     text-align: center;
+    background-color: var(--primary-bgcolor);
+    width: 100%;
+    margin-top: -10px; /* to remove gap on top */
 }
 
 #home-main1 h2 {
@@ -73,6 +89,14 @@ main button {
     margin: 10px 20px;
 }
 
+#home-main1-left {
+    container-type: inline-size; /* prepare for cqw */
+}
+
+#home-main1-left h2 {
+    font-size: 6cqw;
+}
+
 #home-main1-right {
     flex: 1 1;
     max-width: 300px;
@@ -83,47 +107,53 @@ main button {
 
 #home-main2 {
     background-color: white;
+}
+
+#home-main2 > .flex-row {
     padding: 50px;
     column-gap: 5%;
 }
 
-#home-main2 > div {
-    display: flex;
-    flex: 1 1;
-    flex-direction: column;
-    align-items: center;
+.home-main2-element {
     max-width: 300px;
-    row-gap: 20px;
 }
 
-#home-main2 img {
+.home-main2-element img {
     border-radius: 50%;
     object-fit: cover;
     aspect-ratio: 1/1;
     max-width: 100%;
+    display: block;
 }
 
-#home-main2 button {
-    width: 140px;
-    height: 55px;
-    border-radius: 10px;
+.home-main2-element .btn {
+    display: block;
+    width: 48%;
     font-size: 1.5rem;
     background-color: var(--primary-bgcolor);
-    border-width: thin;
+    margin: auto;
 }
 
 #home-main3 {
-    padding: 50px;
+    background-color: var(--primary-bgcolor);
+}
+
+#home-main3 > .flex-row {
+    padding: 5%;
     column-gap: 5%;
     align-items: stretch;
 }
 
-#home-main3-1 {
+#home-main3-1, #home-main3-1x {
     flex: 1 1 40%;
     background-image: url(../images/shot03.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 80px;
+}
+
+#home-main3-1x {
+    display: none;
 }
 
 #home-main3-2 {
@@ -164,9 +194,12 @@ main button {
     background-image: url("../images/shot05.jpg");
     background-size: cover;
     background-position: center;
-    height: 720px;
-    display: flex;
+    margin-top: -10px; /* to remove gap on top */
+}
+
+#home-main5 > .flex-row {
     justify-content: space-between;
+    height: 680px;
 }
 
 #flow-with-us {
@@ -174,9 +207,9 @@ main button {
     opacity: 0.8;
     margin-left: 5%;
     padding: 1rem;
-    width: 210px;
-    border-radius: 30px;
     align-self: center;
+    width: calc(2rem + 210px);
+    border-radius: 30px;
 }
 
 #flow-with-us h2 {
@@ -273,4 +306,112 @@ main button {
     position: absolute;
     right: 0;
     top: 0;
+    border-radius: 15%;
+}
+
+@media only screen and (max-width: 481px) {
+
+    .video-container video {
+        height: 30rem;
+    }
+
+    #middle-dot {
+        display: none;
+    }
+
+    #home-title h1 {
+        margin-top: calc(6.25rem - 10px);
+        font-size: 3.75rem;
+    }
+
+    #home-title-details {
+        flex-wrap: wrap;
+    }
+
+    #home-title h2 {
+        font-size: 1.75rem;
+    }
+
+    #home-main1 div {
+        margin: 0.8vw 1.6vw;
+    }
+    
+    #home-main1-right {
+        display: none;
+    }
+
+    #home-main1 p {
+        font-size: 1rem;
+    }
+
+    #home-main2 > .flex-row {
+        display: block;
+    }
+
+    .home-main2-element {
+        position: relative;
+    }
+
+    .home-main2-element .btn {
+        position: absolute;
+        bottom: 15vw;
+        left: 0;
+        right: 0;
+    }
+
+    #home-main3 > .flex-row {
+        display: block;
+        text-align: center;
+    }
+
+    #home-main3-1 {
+        display: none;
+    }
+
+    #home-main3-1x {
+        margin: auto;
+        display: block;
+        aspect-ratio: 682 / 911;
+        margin-bottom: 5%;    
+    }
+
+    #home-main3-2 h2 {
+        font-size: 1.75rem;
+    }
+
+    #home-main3-2 p {
+        font-size: 0.8rem;
+        line-height: 2;
+        padding-right: 0;
+    }
+
+    #home-main4 {
+        height: 90vh;
+    }
+
+    #home-main5 > .flex-row {
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    #flow-with-us h2 {
+        font-size: 1.5rem;
+    }
+
+    #flow-with-us h3 {
+        font-size: 1.125rem;
+    }
+
+    #home-main5 p {
+        font-size: 0.9rem;
+    }
+
+    #follow-us {
+        align-self: center;
+    }
+
+    #follow-us h3 {
+        font-size: 1.125rem;
+        text-align: center;
+    }
 }

@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contrology Studio - Services</title>
     <link rel="stylesheet" href="assets/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,15 +16,21 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BW7WHWGVHE"></script>
     <script src="assets/analytics.js"></script>
+    <script src="assets/toggleMenu.js" defer></script> 
     <script src="assets/goTop.js" defer></script> 
 </head>
 
 <body>
     <header id="header">
-        <a href="index.html">
-            <img id="home-logo" alt="Contrology Studio" src="images/logo-white.png">
-        </a>
-        <div id="menu-sect">
+        <section id="logo-sect">
+            <a href="index.html">
+                <img id="logo" alt="Contrology Studio" src="images/logo-white.png">
+            </a>
+            <div id="menu-control" onclick="toggleMenu(this, 'menu-sect')">
+                ≡
+            </div>
+        </section>
+        <section id="menu-sect" class="content">
             <nav>
                 <div class="dropdown">
                     <a href="about.html#page-header">About</a>
@@ -49,72 +56,93 @@
                     <a href="contact.html#page-header">Contact</a>
                 </div>
             </nav>
-        </div>
-        <div id="page-header">
-            <h1>Our Service</h1>
-        </div>
+        </section>
+        <section id="page-header">
+            <div class="content">
+                <h1>Our Service</h1>
+            </div>
+        </section>
     </header>
     <i id="topBtn" class=" fa fa-angle-up" onclick="topFunction()" title="Go to top"></i>
     <main id="services">
         <section id="assessment" class="template1">
-            <h2>Initial Physiotherapy Assessment & Pilates/Gyrotonic® Session</h2>
-            <div class="flex-row">
-                <div class="description">
-                    <p>Our unique 80-minute initial session includes a 30-minute comprehensive assessment, followed by a 50-minute Pilates or Gyrotonic® session tailored to your condition. Conducted by a qualified Physiotherapist, this extended session allows us to thoroughly understand your body and develop a personalized program focused on your goals. Whether you're dealing with a persistent injury or aiming for specific goal, we’ll work together to help you succeed.</p>
-                </div>
-                <div class="image">
+            <div class="content">
+                <h2>Initial Physiotherapy Assessment & Pilates/Gyrotonic® Session</h2>
+                <div class="image-mobile">
                     <img src="images/assessment.png" alt="" style="object-position: 50% 70%;">
+                </div>
+                <div class="flex-row">
+                    <div class="description">
+                        <p>Our unique 80-minute initial session includes a 30-minute comprehensive assessment, followed by a 50-minute Pilates or Gyrotonic® session tailored to your condition. Conducted by a qualified Physiotherapist, this extended session allows us to thoroughly understand your body and develop a personalized program focused on your goals. Whether you're dealing with a persistent injury or aiming for specific goal, we’ll work together to help you succeed.</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/assessment.png" alt="" style="object-position: 50% 70%;">
+                    </div>
                 </div>
             </div>
         </section>
         <section id="physiotherapy">
-            <h2>Physiotherapy</h2>
-            <div class="flex-row">
-                <div class="image">
-                    <img src="images/physiotherapy.png" alt="" >
-                </div>
-                <div class="description">
-                    <p>Our physiotherapy sessions include a detailed history, a thorough assessment of your mobility, strength, and coordination, and identification of any underlying issues. You’ll receive expert guidance on treatment options, preventative strategies, and a personalized recovery plan. These sessions are ideal for clients with recent or chronic injuries who are seeking an active approach to recovery.</p>
+            <div class="content">
+                <h2>Physiotherapy</h2>
+                <div class="flex-row">
+                    <div class="image">
+                        <img src="images/physiotherapy.png" alt="" >
+                    </div>
+                    <div class="description">
+                        <p>Our physiotherapy sessions include a detailed history, a thorough assessment of your mobility, strength, and coordination, and identification of any underlying issues. You’ll receive expert guidance on treatment options, preventative strategies, and a personalized recovery plan. These sessions are ideal for clients with recent or chronic injuries who are seeking an active approach to recovery.</p>
+                    </div>
                 </div>
             </div>
         </section>
         <section id="pilates" class="template1">
-            <h2>Clinical Pilates</h2>
-            <div class="flex-row">
-                <div class="description left">
-                    <p>Our Clinical Pilates program is designed for those looking for a purposeful approach to injury rehabilitation or achieving specific goals. Unlike other fitness Pilates, our sessions focus on intentional, controlled movement tailored to your needs. You’ll learn not only how to perform each exercise but also why it’s essential for your recovery. Suitable for everyone—from Pilates beginners to advanced clients seeking focused improvements.</p>
-                </div>
-                <div class="image">
+            <div class="content">
+                <h2>Clinical Pilates</h2>
+                <div class="image-mobile">
                     <img src="images/pilates.png" alt="" style="object-position: 50% 75%;">
+                </div>
+                <div class="flex-row">
+                    <div class="description left">
+                        <p>Our Clinical Pilates program is designed for those looking for a purposeful approach to injury rehabilitation or achieving specific goals. Unlike other fitness Pilates, our sessions focus on intentional, controlled movement tailored to your needs. You’ll learn not only how to perform each exercise but also why it’s essential for your recovery. Suitable for everyone—from Pilates beginners to advanced clients seeking focused improvements.</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/pilates.png" alt="" style="object-position: 50% 75%;">
+                    </div>
                 </div>
             </div>
         </section>
         <section id="gyrotonic">
-            <h2>Gyrotonic®</h2>
-            <div class="flex-row">
-                <div class="image">
-                    <img src="images/gyrotonic.png" alt="" style="object-position: 50% 60%;">
-                </div>
-                <div class="description">
-                    <p>Our Gyrotonic® sessions utilize the unique Pulley Tower, a specialized method developed by Juliu Horvath. This approach engages the entire body through spiraling, circular movements that flow seamlessly, improving range of motion, strength, and flexibility. Suitable for everyone—from individuals recovering from injury to elite athletes.</p>
+            <div class="content">
+                <h2>Gyrotonic®</h2>
+                <div class="flex-row">
+                    <div class="image">
+                        <img src="images/gyrotonic.png" alt="" style="object-position: 50% 60%;">
+                    </div>
+                    <div class="description">
+                        <p>Our Gyrotonic® sessions utilize the unique Pulley Tower, a specialized method developed by Juliu Horvath. This approach engages the entire body through spiraling, circular movements that flow seamlessly, improving range of motion, strength, and flexibility. Suitable for everyone—from individuals recovering from injury to elite athletes.</p>
+                    </div>
                 </div>
             </div>
         </section>
         <section id="pilates-duet" class="template1">
-            <h2>Clinical Pilates (Duet)</h2>
-            <div class="flex-row">
-                <div class="description left">
-                    <p>Our Duet Clinical Pilates provides an affordable way to enjoy Pilates with a friend or family member, all while following your own personalized exercise plan. Guided by our experienced Physiotherapists, you’ll share the experience but still receive tailored care to achieve your individual goals together.</p>
-                </div>
-                <div class="image">
+            <div class="content">
+                <h2>Clinical Pilates (Duet)</h2>
+                <div class="image-mobile">
                     <img src="images/pilates-duet.png" alt="" style="object-position: 50% 55%;">
+                </div>
+                <div class="flex-row">
+                    <div class="description left">
+                        <p>Our Duet Clinical Pilates provides an affordable way to enjoy Pilates with a friend or family member, all while following your own personalized exercise plan. Guided by our experienced Physiotherapists, you’ll share the experience but still receive tailored care to achieve your individual goals together.</p>
+                    </div>
+                    <div class="image">
+                        <img src="images/pilates-duet.png" alt="" style="object-position: 50% 55%;">
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
         <div class="copyright-area">
-            Copyright &copy; 2024-2025 Contrology Studio
+            Copyright &copy; 2024-2025 <a href="index.html">Contrology Studio</a>
         </div>
     </footer>
 </body>

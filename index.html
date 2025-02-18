@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contrology Studio - Flow with Physio, Pilates, Gyrotonic</title>
     <link rel="stylesheet" href="assets/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,16 +16,23 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BW7WHWGVHE"></script>
     <script src="assets/analytics.js"></script>
+    <script src="assets/toggleMenu.js" defer></script> 
     <script src="assets/goTop.js" defer></script> 
+    <script src="assets/autoplay.js"></script> 
 </head>
 
 <body>
     <header class="video-container">
-        <video preload="auto" autoplay controls muted loop>
+        <video id="myVideo" preload="auto" muted loop>
             <source src="assets/class.mp4" type="video/mp4">
         </video> 
-        <div id="video-message">
-            <img id="home-logo" alt="Contrology Studio" src="images/logo-white.png">
+        <div id="video-message" class="content">
+            <section id="logo-sect">
+                <img id="logo" alt="Contrology Studio" src="images/logo-white.png">
+                <div id="menu-control" onclick="toggleMenu(this, 'menu-sect')">
+                    ≡
+                </div>
+            </section>
             <section id="menu-sect">
                 <nav>
                     <div class="dropdown">
@@ -54,7 +62,10 @@
             </section>
             <section id="home-title">
                 <h1>Contrology Studio</h1>
-                <h2>Control your body . Control your energy</h2>
+                <div id="home-title-details">
+                    <h2>Control your body<span id="middle-dot"> ·&nbsp;</span></h2>
+                    <h2>Control your energy</h2>
+                </div>
                 <div>
                     <a href="booking.html#page-header">
                         <button>Book Your Appointment</button>
@@ -65,84 +76,97 @@
     </header>
     <i id="topBtn" class=" fa fa-angle-up" onclick="topFunction()" title="Go to top"></i>
     <main>
-        <section id="home-main1" class="flex-row">
-            <div style="flex: 3 1">
-                <h2>Everyone is different, so is our studio.</h2>
-                <p>
-                    At Contrology Studio, we believe in individualised movement-therapy. 
-                </p>
-            </div>
-            <div id="home-main1-right">
-            </div>
-        </section>
-        <section id="home-main2" class="flex-row">
-            <div>
-                <img src="images/shot021.jpg" alt="">
-                <a href="services.html#page-header">
-                    <button>Service</button>
-                </a>
-            </div>
-            <div>
-                <img src="images/shot022.jpg" alt="">
-                <a href="booking.html#page-header"> 
-                    <button>Booking</button>
-                </a>
-            </div>
-            <div>
-                <img src="images/shot023.jpg" alt="">
-                <a href="faq.html#page-header">
-                    <button>FAQ</button>
-                </a>
-            </div>
-        </section>
-        <section id="home-main3" class="flex-row">   
-            <div id="home-main3-1">
-            </div>
-            <div id="home-main3-2">
-                <div>
-                    <h2>
-                        Initial Physiotherapy Assessment & Pilates/Gyrotonic® Session
-                    </h2>
+        <section id="home-main1">
+            <div class="flex-row content">
+                <div id="home-main1-left" style="flex: 3 1">
+                    <h2>Everyone is different, so is our studio.</h2>
                     <p>
-                        Experience our unique 80-minute initial session tailored to your needs, starting with a 30-minute comprehensive assessment followed by a 50-minute Pilates or Gyrotonic® session conducted by a qualified physiotherapist. Together, we’ll set your health goals and develop an individualized program.
+                        At Contrology Studio, we believe in individualised movement-therapy. 
                     </p>
                 </div>
-                <div>
-                    <a href="booking.html#page-header">
-                        <button>Book Here</button>
+                <div id="home-main1-right">
+                </div>
+            </div>
+        </section>
+        <section id="home-main2">
+            <div class="flex-row content">
+                <div class="home-main2-element">
+                    <img src="images/shot021.jpg" alt="">
+                    <br>
+                    <a href="services.html#page-header" class="btn">
+                        Service
+                    </a>
+                </div>
+                <div class="home-main2-element">
+                    <img src="images/shot022.jpg" alt="">
+                    <br>
+                    <a href="booking.html#page-header" class="btn"> 
+                        Booking
+                    </a>
+                </div>
+                <div class="home-main2-element">
+                    <img src="images/shot023.jpg" alt="">
+                    <br>
+                    <a href="faq.html#page-header" class="btn">
+                        FAQ
                     </a>
                 </div>
             </div>
         </section>
+        <section id="home-main3">
+            <div class="flex-row content">
+                <div id="home-main3-1">
+                </div>
+                <div id="home-main3-2">
+                    <div>
+                        <h2>
+                            Initial Physiotherapy Assessment & Pilates/Gyrotonic® Session
+                        </h2>
+                        <div id="home-main3-1x">
+                        </div>
+                        <p>
+                            Experience our unique 80-minute initial session tailored to your needs, starting with a 30-minute comprehensive assessment followed by a 50-minute Pilates or Gyrotonic® session conducted by a qualified physiotherapist. Together, we’ll set your health goals and develop an individualized program.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="booking.html#page-header">
+                            <button>Book Here</button>
+                        </a>
+                    </div>
+                </div>
+            </div>   
+        </section>
         <section id="home-main4">
             <iframe src="https://www.google.com/maps/d/embed?mid=1sMewBJOmuAHziNlrVwF8Kq8Y5P3UuGs&ehbc=2E312F" width="100%" height="600"></iframe>
         </section>
-        <section id="home-main5" class="">
-            <div id="flow-with-us">
-                <h2>Flow with Us</h2>
-                <p>306/180-186 Burwood Rd, Burwood NSW 2134</p>
-                <p>Phone: 0413091144 <br> 
-                   <span class="small-text">(English, Cantonese and Mandarin)</span>
-                </p>
-                <p>Email: <span class="small-text">contrologystudio.sydney@gmail.com</span></p>
-                <h3 id="open-hours">OPEN HOURS</h3>
-                <p>Mon to Sun</p>
-                <p>By Appointment Only</p>
-            </div>
-            <div id="follow-us">
-                <h3>FOLLOW US</h3>
-                <a href="https://www.facebook.com/profile.php?id=61559223262892" target="_blank">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="#" onclick="document.getElementById('wechat-modal').style.display = 'block'; return false;">
-                    <i class="fab fa-weixin"></i>
-                </a>
-                <a href="https://www.instagram.com/ctrlogy_studio" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.xiaohongshu.com/user/profile/5e75bdd4000000000100186d" target="_blank">
-                    <img src="images/xiaohongshu.png" alt="">
-                </a>
+        <section id="home-main5">
+            <div class="flex-row content">
+                <div id="flow-with-us">
+                    <h2>Flow with Us</h2>
+                    <p>306/180-186 Burwood Rd, Burwood NSW 2134</p>
+                    <p>Phone: 0413091144 <br> 
+                       <span class="small-text">(English, Cantonese and Mandarin)</span>
+                    </p>
+                    <p>Email: <span class="small-text">contrologystudio.sydney@gmail.com</span></p>
+                    <h3 id="open-hours">OPEN HOURS</h3>
+                    <p>Mon to Sun</p>
+                    <p>By Appointment Only</p>
+                </div>
+                <div id="follow-us">
+                    <h3>FOLLOW US</h3>
+                    <a href="https://www.facebook.com/profile.php?id=61559223262892" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="#" onclick="document.getElementById('wechat-modal').style.display = 'block'; return false;">
+                        <i class="fab fa-weixin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ctrlogy_studio" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.xiaohongshu.com/user/profile/5e75bdd4000000000100186d" target="_blank">
+                        <img src="images/xiaohongshu.png" alt="">
+                    </a>
+                </div>
             </div>
         </section>
 

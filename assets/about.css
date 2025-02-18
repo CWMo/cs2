@@ -5,15 +5,15 @@ main {
 
 #about-main1 {
     color: var(--dark-color2);
-}
-
-#about-main1 {
-    padding: 4rem 10%;
     background-color: var(--light-bgcolor);
     font-family: var(--system-font);
 }
 
-#team {
+#about-main1 > .content {
+    padding: 4rem 10%;
+}
+
+#team > .content {
     padding: 3% 5%;
 }
 
@@ -27,14 +27,14 @@ main {
     column-gap: 3%;
 }
 
-#team > .flex-row > div {
+#team  .flex-row > div {
     display: flex;
     flex: 1 1;
     flex-direction: column;
     max-width: 330px;
 }
 
-#team > .flex-row img {
+#team  .flex-row img {
     border-radius: 15%;
     object-fit: cover;
     aspect-ratio: 1.4/1;
@@ -108,8 +108,69 @@ main {
 }
 
 @media only screen and (min-width: 1100px) {
+
     #salad h3 {
         position: static;
+        margin-bottom: 0;
     }
+
 }
 
+@media only screen and (max-width: 481px) {
+
+    main {
+        font-size: 1rem;
+    }
+
+    #about-main1 > .content {
+        padding: 5vw 10%;
+    }
+
+    #team {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    #team h2 {
+        font-size: 2rem;
+    }
+
+    #team .flex-row {
+        display: block;
+    }
+
+    #team p {
+        font-size: 1rem;
+    }
+
+    #team img {
+        display: block;
+        margin-top: 1.5rem;
+    }
+
+    #team a {
+        text-decoration: underline;
+    }
+    
+    .persona {
+        text-align: center;
+    }
+
+    .persona h3 {
+        font-size: 1.75rem;
+        position: static;
+    }
+
+    .persona .flex-row {
+        display: block;
+    }
+
+    .persona .flex-row .left {
+        display: block;
+    }
+
+    .persona .right {
+        font-size: 0.8rem;
+        line-height: 2;
+    }
+}
