@@ -72,12 +72,16 @@
                     <p>306/180-186 Burwood Rd, <br>
                         Burwood NSW 2134
                     </p>
+                    <p class="no-mobile"><br> </p>
                     <p>You’ll find the lift entry next to “Ice Kirin”. We’re located on Level 3</p>
                 </div>
                 <div>
                     <h3>Contact</h3>
                     <p>Phone: 0413091144 <br>
                         (English, Cantonese and Mandarin)
+                    </p>
+                    <p id="wechat">Wechat: <a href="#" onclick="document.getElementById('wechat-modal').style.display = 'block'; return false;">
+                        ContrologyStudio <i class="fab fa-weixin"></i></a>
                     </p>
                     <p>Email: <br>
                         contrologystudio.syndey@gmail.com
@@ -86,10 +90,22 @@
                 <div>
                     <h3>Hours</h3>
                     <p>Monday - Sunday <br class="no-mobile"></p>
+                    <p class="no-mobile"><br> </p>
                     <p><br class="no-mobile"><br class="no-mobile">By Appointment Only</p>
                 </div>
             </div>
         </section>
+        <!-- The Modal popup for wechat -->
+        <div id="wechat-modal" class="modal">
+            <div id="wechat-modal-content">
+                <h3>Follow us on WeChat</h3>
+                <p>Add us by scanning the QR code below from WeChat:</p>
+                <div>
+                    <img src="images/wecht.jpg" alt="">
+                </div>
+                <button class="close-btn" onclick="document.getElementById('wechat-modal').style.display='none'">X</button>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="copyright-area">
