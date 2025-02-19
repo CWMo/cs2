@@ -229,7 +229,7 @@ footer {
         color: white;
     }
 
-    #menu-sect, .dropdown-item {
+    #menu-sect, .dropdown:hover .dropdown-item {
         display: none;
     }
 
@@ -245,10 +245,6 @@ footer {
         line-height: 1;
         font-size: 1.25rem;
         padding: 0 5%;
-    }
-
-    .dropdown-item {
-        display: none;
     }
 
     #menu-sect.show {
