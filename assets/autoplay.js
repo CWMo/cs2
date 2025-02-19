@@ -3,6 +3,6 @@ document.addEventListener(
     "DOMContentLoaded", 
     function() {
         let video = document.getElementById("myVideo");
-        video.play().catch(error => console.log("Autoplay blocked:", error));
+        video.play().catch(error => alert("Autoplay blocked:", error));
     }
 );
