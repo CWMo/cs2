@@ -247,10 +247,10 @@ footer {
         padding: 0 5%;
     }
 
-    .dropdown-items {
+    .dropdown-item {
         display: none;
     }
-    
+
     #menu-sect.show {
         display: block;
         position: absolute;
