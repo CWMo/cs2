@@ -28,7 +28,7 @@ h3 {
     border-radius: 50%;
 }
 
-#wechat:hover a p {
+#wechat:hover a {
     text-decoration: underline;
 }
 
@@ -78,5 +78,9 @@ h3 {
 
     .no-mobile {
         display: none;
+    }
+
+    #wechat a {
+        text-decoration: underline;
     }
 }
