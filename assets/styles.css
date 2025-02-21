@@ -34,13 +34,11 @@
 
 body {
     font-family: var(--system-font);
-    /* background-color: white; */
     font-weight: 100;
     font-size: 1.5rem;
     color: var(--dark-color);
     line-height: 1.5;
-    /* max-width: var(--max-width); */
-    /* margin: auto; */
+    -webkit-text-size-adjust: 100%;
 }
 
 *, *::before, *::after {
