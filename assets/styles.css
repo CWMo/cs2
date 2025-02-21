@@ -98,7 +98,6 @@ a {
 
 #menu-control {
     display: none;
-    font-family: "Arial", "Helvetica", "Noto Sans", sans-serif;
 }
 
 nav {
@@ -223,7 +222,8 @@ footer {
     #menu-control {
         display: block;
         margin-right: 5%;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        font-family: "Noto Sans Math", Arial;
         pointer-events: all;
         color: white;
     }
@@ -249,7 +249,7 @@ footer {
     #menu-sect.show {
         display: block;
         position: absolute;
-        top: 90px;
+        top: 80px;
         width: 100%;
         text-align: right;
     }
