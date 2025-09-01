@@ -1,6 +1,7 @@
 main {
     font-size: 1.25rem;
-    line-height: 1.75;;
+    line-height: 1.75;
+    background-color: var(--primary-bgcolor);
 }
 
 #about-main1 {
@@ -37,7 +38,7 @@ main {
 #team  .flex-row img {
     border-radius: 15%;
     object-fit: cover;
-    aspect-ratio: 1.4/1;
+    aspect-ratio: 1.1/1;
     max-width: 100%;
 }
 
@@ -48,7 +49,7 @@ main {
 }
 
 #team p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0;
 }
 
@@ -56,7 +57,7 @@ main {
     text-decoration: underline; 
 }
 
-#winkie, #shirley {
+#winkie, #beverly, #salad {
     background-color: var(--light-bgcolor);
 }
 
@@ -109,7 +110,7 @@ main {
 
 @media only screen and (min-width: 1100px) {
 
-    #salad h3 {
+    #salad h3, #joey h3 {
         position: static;
         margin-bottom: 0;
     }

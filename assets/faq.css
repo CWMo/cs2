@@ -3,7 +3,7 @@ main {
 }
 
 main .content {
-    padding: 10%;
+    padding: 3% 10%;
 }
 
 #faq {
@@ -49,7 +49,13 @@ p {
     text-align: left;
     background-color: var(--primary-bgcolor);
     color: var(--dark-color3);
+    line-height: 1.6;
 }
+
+#policy h2 {
+    font-size: 3rem;
+}
+
 
 @media (pointer: coarse) {
     /* when hover is not supported */

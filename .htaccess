@@ -1,0 +1,20 @@
+# General caching settings
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType video/mp4 "access plus 1 month"
+  ExpiresByType video/webm "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpg|jpeg|png|gif|svg|webp|mp4|webm|woff|woff2|ttf|otf|eot)$">
+    Header set Cache-Control "public, max-age=2592000, immutable" env=!no_cache
+  </FilesMatch>
+  <FilesMatch "\.(html|htm|js|css)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Specific settings for video files (like .mp4 and .webm)
+<FilesMatch "\.(mp4|webm)$">
+  Header set Cache-Control "public, max-age=2592000, immutable"
+</FilesMatch>

@@ -1,3 +1,7 @@
+main {
+    background-color: var(--primary-bgcolor);
+}
+
 #physiotherapy, #gyrotonic {
     background-color: var(--light-bgcolor);
 }
