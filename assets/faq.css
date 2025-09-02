@@ -73,4 +73,9 @@ p {
         font-size: 0.8rem;
         line-height: 2;
     }
+    #policy h2 
+    {
+        font-size: 2rem;
+    }
+
 }

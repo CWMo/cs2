@@ -327,7 +327,7 @@ main button {
     }
 
     #home-title h1 {
-        margin-top: calc(6.25rem - 10px);
+        /*margin-top: calc(6.25rem - 10px);*/
         font-size: 3.75rem;
     }
 
@@ -364,6 +364,10 @@ main button {
         bottom: 15vw;
         left: 0;
         right: 0;
+        font-size: 1rem;
+    }
+
+    #home-main3 button {
         font-size: 1rem;
     }
 
@@ -406,6 +410,11 @@ main button {
         justify-content: flex-end;
     }
 
+    #flow-with-us {
+        margin-bottom: 15%;
+        margin-left: 0;
+    }
+
     #flow-with-us h2 {
         font-size: 1.5rem;
     }
@@ -420,6 +429,7 @@ main button {
 
     #follow-us {
         align-self: center;
+        margin-right: 0;
     }
 
     #follow-us h3 {
