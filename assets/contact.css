@@ -122,6 +122,7 @@ form>div {
   width: 1rem;
   background-color: var(--primary-bgcolor);
   border: 1px solid black;
+  border-radius: 0.3rem;
 }
 
 /* On mouse-over, add a grey background color */
