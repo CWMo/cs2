@@ -189,9 +189,18 @@
                     <label for="message">Message <span class="comment">(required)</span></label> <br />
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
+                <div class="consent-statement options">
+                    <label>
+                        <input type="checkbox" name="consent-option" id="consent-option" required>
+                        I agree that the information I provide here being used only to respond to 
+                        this inquiry, not shared or sold, as detailed in the
+                        <a href="privacy.html" target="_blank">Privacy Policy</a> (opens in new tab).
+                        <span class="custom-checkmark"></span>
+                    </label>
+                </div>
                 <input type="hidden" name="_next" value="https://contrologystudio.com.au/contact.html">
         
-                <div id="submit-button"><button type="submit">Submit</button></div>
+                <div id="submit-button"><button type="submit" disabled>Submit</button></div>
             </form>
         </section>
         <!-- The Modal popup for wechat -->
@@ -211,5 +220,14 @@
             Copyright &copy; 2024-2026 <a href="index.html">Contrology Studio</a>
         </div>
     </footer>
+    <script>
+        const submitBtn = document.querySelector('#submit-button button');
+        const consentBox = document.getElementById('consent-option');
+
+        consentBox.addEventListener('change', function() {
+            // Enable button if checked, disable if unchecked
+            submitBtn.disabled = !this.checked;
+            });
+    </script>
 </body>
 </html>

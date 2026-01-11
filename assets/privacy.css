@@ -1,0 +1,17 @@
+body {
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 481px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+}
